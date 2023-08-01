@@ -1,0 +1,352 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block head %}
+<head>
+
+{% endblock %}
+
+{% block body %}
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" >
+      <h1>Welcome to Medic-Assist</h1>
+      <h2>This is general disease prediction system 
+          based on<br> symptoms, which are given by the patient or any user.</h2> 
+      <a href="{%url 'home'%}" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+ <br>
+
+  <main id="main">
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Why Choose MedicAssist ?</h3>
+              <p>
+                Many people are unsure if the symptoms they are experiencing 
+                are indicative of a certain disease, and hence they are unable to take the required safeguards.
+                Predict the disease in early stage lowers of the complications. </p>
+              <div class="text-center">
+                <a href="about" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Health Protection</h4>
+                    <p>Stay home, <br> Use this site, <br> Care your health </p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>High  Accuracy</h4>
+                    <p>We detect the disease easily and with high accuracy</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Chat with a Doctors</h4>
+                    <p>You can send your health questions via chat with a doctor's</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div  Class="row d-flex justify-content-center">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="fas fa-user-md"></i>
+              <span data-purecounter-start="0" data-purecounter-end="41" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Diseases</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="far fa-hospital"></i>
+              <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Departments</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fas fa-flask"></i>
+              <span data-purecounter-start="0" data-purecounter-end="132" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Symptoms</p>
+            </div>
+          </div>
+
+        </div> </center>
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Services</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="">Check Disease</a></h4>
+              <p>This site check various diseases depends on the symptoms entered by the user</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4><a href="">Online Consultation</a></h4>
+              <p>There are ways to reach our doctor without needing to visit the clinic, with online consultation</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-hospital-user"></i></div>
+              <h4><a href="">Recognize Disease</a></h4>
+              <p>We provide a link to information about the disease being predicted for the user </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+<br>
+
+  <!-- ======= Gallery Section ======= -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tips</h2>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row g-0">
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'homepage/assets/img/tips1.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'homepage/assets/img/tips1.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'homepage/assets/img/tips2.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'homepage/assets/img/tips2.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'homepage/assets/img/tips3.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'homepage/assets/img/tips3.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'homepage/assets/img/tips4.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'homepage/assets/img/tips4.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'homepage/assets/img/tips5.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'homepage/assets/img/tips5.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'homepage/assets/img/tips6.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'homepage/assets/img/tips6.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'homepage/assets/img/tips7.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'homepage/assets/img/tips7.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'homepage/assets/img/tips8.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'homepage/assets/img/tips8.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Gallery Section -->
+
+  <br>
+      <!-- ======= Departments Section ======= -->
+      <section id="departments" class="departments">
+        <div class="container">
+          <div class="section-title">
+            <h2>Departments</h2>
+            <p></p>
+          </div>
+          <div class="row gy-4">
+            <div class="col-lg-3">
+              <ul class="nav nav-tabs flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Neurology</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Dermatology</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Rheumatology</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-9">
+              <div class="tab-content">
+                <div class="tab-pane active show" id="tab-1">
+                  <div class="row gy-4">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Cardiology</h3>   
+                      <p class="fst-italic">Diseases seen by a Cardiologist doctor include:<br> Heart attack, Bronchial Asthma, Hypertension</p>
+                      <p> A cardiologist is a healthcare provider who can treat high blood pressure and heart failure, as well as problems with your heart valves and blood vessels issues. They can treat or help you prevent a number of cardiovascular problems. </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="{% static 'homepage/assets/img/cardiology.jpg'%}" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-2">
+                  <div class="row gy-4">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Neurology</h3>
+                      <p class="fst-italic"> Diseases seen by a Neurologist doctor include:<br> Varicose veins, Paralysis (brain hemorrhage), Migraine, Cervical spondylosis </p>
+                      <p> A neurologist is a medical doctor who diagnoses, treats and manages disorders of the brain and nervous system. A neurologist knows the anatomy, function and conditions that affect your nerves and nervous system. </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="{% static 'homepage/assets/img/departments-2.jpg'%}" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-3">
+                  <div class="row gy-4">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Dermatology</h3>
+                      <p class="fst-italic">Diseases seen by a Dermatologist doctor include: <br>
+                        Acne, Chicken pox, Fungal infection, Psoriasis, Impetigo</p>
+                      <p>A dermatologist is a medical doctor who specializes in conditions that affect the skin, hair, and nails. Whether it's rashes, wrinkles, psoriasis, or melanoma, no one understands your skin, hair, and nails better than a dermatologist. </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="{% static 'homepage/assets/img/dd.jpg'%}" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-4">
+                  <div class="row gy-4">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Rheumatology</h3>
+                      <p class="fst-italic"> Diseases seen by a Rheumatologist doctor include: <br> Osteoarthristis, Arthritis </p>
+                      <p> A rheumatologist is a board-certified internist or pediatrician who is qualified by additional training and experience in the diagnosis
+                         and treatment of arthritis and other diseases of the joints, muscles, and bones.</p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="{% static 'homepage/assets/img/rheumatology.jpg'%}" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> <!-- End Departments Section -->
+    
+      <br><br><br>
+    
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top" style="background-image: url('/static/homepage/assets/img/footer.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h2>MedicAssist</h2><br>
+            <p> This system is used to predict the
+              disease from <br> the symptoms which are given by the patient <br>or any user using machine learning algorithms. </p>          </div>
+          <div class="col-md-4">
+            <h2>Contact</h2> <br>
+            <h7><span>Address:</span>  Palestine </h7> <br>
+            <h7><span>Email:</span> MedicAssist@gmail.com </h7>
+          </div>
+          <div class="col-md-3">
+            <h2>Useful Links</h2><br>
+            <div class="row">
+              <div class="col-md-6">
+                <ul>
+                  <li><a href="{%url 'home'%}">Home</a></li>
+                  <li><a href="{%url 'about'%}">About</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li><a href="{%url 'help'%}">Help</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="container d-md-flex py-4">
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>MedicAssist</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,345 @@
+{% extends "basic.html" %}
+{% load static %}
+
+{% block head %}
+
+<style>
+  #banner-other {
+    background-image: url( "/static/../templates/logo.PNG "); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 110px;
+  }
+  
+  #banner-other .head {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  
+  #banner-other ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left: 0px;
+  }
+  
+  #banner-other ul li {
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  #banner-other ul li a {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  
+section.aboutUs {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 10%;
+  overflow: hidden;
+}
+
+section.aboutUs h4 {
+  font-size: 24px;
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 8%;
+  font-weight: 700;
+  text-align: center;
+}
+
+section.aboutUs .aboutslider .bannerText {
+  padding: 20px 0 40px 0;
+  position: relative;
+  z-index: 9;
+}
+
+section.aboutUs .aboutslider .bannerText h3 {
+  font-size: 40px;
+  color: #000;
+  margin: 0;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+section.aboutUs .aboutslider .bannerText h3 span {
+  font-size: 26px;
+  color: #26B5BB;
+  margin: 0;
+}
+
+section.aboutUs .aboutslider .bannerText h5 {
+  font-size: 20px;
+  color: #7D7D7D;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: 32px;
+  margin-left: 15px;}
+
+section.aboutUs .bannerImage .imgbg {
+  position: absolute;
+  right: -7%;
+  top: 5%;
+  width: 45%;
+  z-index: 1;
+}
+
+section.aboutUs .bannerImage .imgbg img {
+  width: 100%;
+}
+
+section.aboutUs .bannerImage .MaskGroup5 {
+  position: absolute;
+  left: 0;
+  top: 16%;
+  width: 12%;
+}
+
+section.aboutUs .bannerImage .MaskGroup5 img {
+  width: 100%;
+}
+
+section.aboutUs .bannerImage .Polygon1 {
+  position: absolute;
+  left: 30%;
+  top: 16%;
+}
+
+section.aboutUs .bannerImage .Polygon2 {
+  position: absolute;
+  left: 70%;
+  top: 16%;
+}
+
+section.aboutUs .bannerImage .Polygon4 {
+  position: absolute;
+  left: 93%;
+  top: 80%;
+}
+
+section.aboutUs .bannerImage .Polygon5 {
+  position: absolute;
+  left: 60%;
+  top: 60%;
+}
+  
+</style>
+
+{% endblock %}
+
+{% block body %}
+
+<body>
+
+   <!-- start first section -->
+    <section id="banner-other"  style="background-image: url('/static/homepage/assets/img/2.png'); height: 500px;">
+      <div class="container">
+          <div class="row"> <br><br>
+              <div class="col-12"> <br><br>
+                  <p class="head">About Us</p> 
+                  <ul>
+                      <li><a href="{%url 'home'%}">Home</a></li>
+                      <li>/</li>
+                      <li><a href="{%url 'about'%}">About</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </section>
+  <!-- end first section -->
+
+<br><br>
+
+<!-- start about us section -->
+<section class="aboutUs">
+    <div class="container">
+        <div class="about-slider">
+            <div class="aboutslider">
+                <div class="slide">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="bannerText">
+                          <h2>Welcome to our Website !</h2> <br>
+                          <h5>We understand the importance of early detection and prevention when it comes 
+                            to maintaining good health. Our algorithms analyze a wide range of symptoms and their patterns,
+                             helping you identify potential health risks and take proactive measures. <br><br>
+                             Whether you're experiencing specific symptoms or seeking general information. Our site is designed to assist you on your health journey.  Join us on this journey as we harness the power of symptoms analysis to predict diseases and promote a healthier future.
+                             <br><br> Your health is in your hands, and we're here to provide the insights you need.
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                </div>    
+              </div>
+        </div>
+    </div>
+    <div class="bannerImage">
+      <div class="imgbg">
+        <img src="/static/homepage/assets/img/main1.png" alt="" />
+      </div>
+      <div class="MaskGroup5">
+        <img src="/static/homepage/assets/img/MaskGroup5.png" alt="" />
+      </div>
+      <div class="Polygon1">
+        <img src="/static/homepage/assets/img/Polygon1.png" alt="" />
+      </div>
+      <div class="Polygon2">
+        <img src="/static/homepage/assets/img/Polygon1.png"  alt="" />
+      </div>
+      <div class="Polygon4">
+        <img src="/static/homepage/assets/img/Polygon4.png"  alt="" />
+      </div>
+      <div class="Polygon5">
+        <img src="/static/homepage/assets/img/Polygon5.png"  alt="" />
+      </div>
+    </div>
+  </section> 
+ <!-- end about us section  -->
+
+   <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1" style="font-size:20px;"> What are the benefits of using a Disease Prediction System? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p style="font-size:18px;"> • The system can assist healthcare professionals in making more accurate diagnoses, leading to timely and appropriate treatment. <br>
+                  • It can also help in early detection of diseases, potentially improving patient outcomes. <br>
+                  • Additionally, the system can reduce the workload on healthcare providers by automating the initial screening process and allowing them to focus on critical cases.  <br>
+                  • Overall, it has the potential to improve the efficiency and effectiveness of healthcare delivery.
+                </p> 
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed" style="font-size:20px;">How does the System ensure Accuracy in disease prediction?
+                <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p style="font-size:18px;">
+                  • The accuracy of the system depends on the quality and quantity of data used for training the machine learning model. <br>
+
+                  • It's important to note that while Disease Prediction Systems strive for accuracy, they are not infallible. Clinical judgment and professional evaluation should always be sought for definitive diagnoses and treatment decisions. <br>
+
+                  • These systems are meant to assist healthcare professionals and empower patients but should not replace human expertise and comprehensive medical evaluation.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed" style="font-size:20px;">How does the Disease Prediction System based on Symptoms work?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p style="font-size:18px;">
+                  • The Disease Prediction System utilizes machine learning techniques to improve the treatment of patients. <br>
+  
+                  • When a patient enters their symptoms as input, the system evaluates the symptoms and predicts the disease as an output. <br>
+                  
+                  • The system relies on a dataset of symptoms and diseases, which is used to train a machine learning model. This model learns relationships between symptoms and diseases from the training data. <br>
+                  
+                  • When the symptoms is entered, the model applies its learned knowledge to predict the most likely disease based on the input. <br>
+                  
+                  • Feedback from users, healthcare professionals, and new data can be used to update the system, enhance its accuracy, and incorporate new knowledge into the prediction model. <br>
+                  </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed" style="font-size:20px;"> Are Disease Prediction Systems suitable for self-diagnosis at home?
+                <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p style="font-size:18px;">
+                  It is recommended to use Disease Prediction Systems as supportive tools alongside professional medical consultation. If individuals have health concerns, it is advisable to consult with a healthcare professional who can provide a comprehensive evaluation and accurate diagnosis based on a holistic understanding of the individual's health and medical history.
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed" style="font-size:20px;">How does the system handle the input of Symptoms from user?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p style="font-size:18px;">
+                  The system provides a list of symptoms, where the users can add whatever  symptoms they are having from a drop-down consisting of 132 symptoms listed. Whatever symptoms they chose get added to the system list after which they can click on predict to get their prognosis. </p>
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+<br><br><br>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top" style="background-image: url('/static/homepage/assets/img/footer.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h2>MedicAssist</h2><br>
+            <p> This system is used to predict the
+              disease from <br> the symptoms which are given by the patient <br>or any user using machine learning algorithms. </p> </div>
+          <div class="col-md-4">
+            <h2>Contact</h2> <br>
+            <h7><span>Address:</span>  Palestine </h7> <br>
+            <h7><span>Email:</span> MedicAssist@gmail.com </h7>
+          </div>
+          <div class="col-md-3">
+            <h2>Useful Links</h2><br>
+            <div class="row">
+              <div class="col-md-6">
+                <ul>
+                  <li><a href="{%url 'home'%}">Home</a></li>
+                  <li><a href="{%url 'about'%}">About</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li><a href="{%url 'help'%}">Help</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="container d-md-flex py-4">
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>MedicAssist</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+</body>
+
+{% endblock %}
+

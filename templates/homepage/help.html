@@ -1,0 +1,147 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block head %}
+ <style>
+    body {
+        color: #5a5a5a;
+        overflow-x: hidden;
+        background-color: #F1F7FD !important;     
+    }  
+    nav {
+        font-family: sans-serif;
+    }  
+    .navbar-brand {
+        font-size: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }   
+    @media (min-width: 768px) {
+        html {
+            font-size: 15px;
+        }
+    }  
+    .container {
+    }  
+    .pricing-header {
+        max-width: 800px;
+    }  
+    .card-deck .card {
+        min-width: 220px;
+    } 
+    .themed-container {
+        padding: 15px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        background-color: #FFFFFF;
+        max-width: 990px;
+        border-radius:10px;
+    }
+    
+</style>
+{% endblock %}
+
+{% block body %}
+
+    <form id="form1">
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1>How does Our Site Work ?</h1>
+                <p class="lead">Please find below the Steps to go about the Disease Prediction System. <br> Click to <a href="/about">Learn More</a></p>
+            </div> <br>
+            <div class="container themed-container"> • Registration on the site is either a Patient or a Doctor </div>
+            <div class="container themed-container"> • As a Patient, there are three options - check the disease, view consultation history, and give feedback </div>
+            <div class="container themed-container"> • You can check the disease by entering the symptoms that you suffer from </div>
+            <div class="container themed-container"> • Click on predict button to get the predicted disease and confidence score </div>
+            <div class="container themed-container"> • The system suggests specialized doctors for the predicted disease </div>
+            <div class="container themed-container"> • Patients can access a list of these doctors, ability to chat with them online and give an evaluation to them            </div>
+            <div class="container themed-container"> • Also the system allow patients to give feedback and view the consultation history </div>
+            <div class="container themed-container"> • As a Doctor, you can view the consultation history with patients, and give feedback to the system </div>
+           
+    </form>
+
+
+<!-- Large modal -->
+<div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+     
+  <center>
+    <h1>Sign-Up  As</h1>
+    </center>
+  
+  <center>
+  <form>
+    <div class="container mt-5 mb-5 ml-5 mr-5">
+   <div class="row">
+  
+      <div class="col">
+  <a href="{% url 'signup_doctor' %}">
+  <img  alt="doctor" src="{% static 'homepage/doctor.png' %}"  class="img">
+  </a>
+      </div>
+  
+      <div class="col">
+  <a href="{% url 'signup_patient' %}">
+  <img  alt="patient" src="{% static 'homepage/patient.png' %}"  class="img">
+  </a>
+    </div>
+    </div>
+    </div>
+  </form>
+  </center>
+</div>
+</div>
+</div>
+
+
+<br><br><br><br><br><br>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top" style="background-image: url('/static/homepage/assets/img/footer.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h2>MedicAssist</h2><br>
+            <p> This system is used to predict the
+              disease from <br> the symptoms which are given by the patient <br>or any user using machine learning algorithms. </p>          </div>
+          <div class="col-md-4">
+            <h2>Contact</h2> <br>
+            <h7><span>Address:</span>  Palestine </h7> <br>
+            <h7><span>Email:</span> MedicAssist@gmail.com </h7>
+          </div>
+          <div class="col-md-3">
+            <h2>Useful Links</h2><br>
+            <div class="row">
+              <div class="col-md-6">
+                <ul>
+                  <li><a href="{%url 'home'%}">Home</a></li>
+                  <li><a href="{%url 'about'%}">About</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li><a href="{%url 'help'%}">Help</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="container d-md-flex py-4">
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>MedicAssist</span></strong>. All Rights Reserved
+        </div>
+      </div>
+   
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+{% endblock %}
+

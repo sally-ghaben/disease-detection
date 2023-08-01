@@ -1,0 +1,187 @@
+{% extends "basic.html" %}
+{% load static %}
+
+{% block head %}
+<style>
+body {
+    background-color: #F1F7FD !important;     
+}  
+</style>
+{% endblock %}
+
+{% block body %}
+
+<body>
+
+<section id="departments" class="departments">
+    <div class="container">
+      <div class="section-title">
+        <h2>Symptoms</h2>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-3">
+          <ul class="nav nav-tabs flex-column">
+            <li class="nav-item">
+              <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">chest_pain</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-2">fast_heart_rate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-3">dizziness</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-4">swelling_joints</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-5">sinus_pressure</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-6">throat_irritation </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-7">nausea</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-8">back_pain</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-9">belly_pain</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-10">redness_of_eyes</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-9">
+          <div class="tab-content">
+            <div class="tab-pane active show" id="tab-1">
+              <div class="row gy-4">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>chest_pain (آلام الصدر)</h3>   
+                  <p class="fst-italic">Discomfort or pain in the chest region.</p>
+                  <p>"Chest pain can be a symptom of various underlying conditions, ranging from mild to severe. It is essential to consult with a healthcare professional if you are experiencing chest pain to determine the cause and receive appropriate medical advice." </p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'homepage/assets/img/chest-pain.png'%}" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-2">
+              <div class="row gy-4">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>fast_heart_rate (تسارع دقات القلب)</h3>
+                  <p class="fst-italic">Rapid or increased heart rate.</p>
+                  <p>"The fast heart rate occurs frequently and can occur both at rest and during physical exertion. No specific triggers have been identified. There are no accompanying symptoms such as chest pain, shortness of breath, dizziness, or fatigue."</p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'homepage/assets/img/fast-heart.jpg'%}" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-3">
+              <div class="row gy-4">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>dizziness (الشعور بالدوخة)</h3>
+                  <p class="fst-italic">Sensation of lightheadedness or unsteadiness.</p>
+                  <p>"Dizziness is a sensation of lightheadedness, unsteadiness, or spinning, often described as feeling faint or having a false sense of motion. It can be caused by various factors, including inner ear problems, hypotension, dehydration,  cardiovascular conditions, neurological disorders, anxiety or panic disorders, and low blood sugar levels."</p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'homepage/assets/img/dizziness.jpg'%}" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-4">
+              <div class="row gy-4">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>swelling_joints (تورم المفاصل)</h3>
+                  <p class="fst-italic"> Enlargement or puffiness in the joints.</p>
+                  <p> "Swelling joints refer to the abnormal enlargement or puffiness of the joints, resulting in increased size or visible bulging. It is often accompanied by pain, stiffness, redness, and warmth around the affected joint area. Swelling joints can occur due to various reasons, including joint inflammation, injury or trauma to the joint,  gout, infections, or fluid accumulation within the joint."</p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'homepage/assets/img/swelling_joints.png'%}" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-5">
+              <div class="row gy-4">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>sinus_pressure (ضغط الجيوب الأنفية)</h3>
+                  <p class="fst-italic"> Feeling of fullness or pressure in the sinuses. </p>
+                  <p>"Sinus pressure refers to a sensation of discomfort or fullness in the areas around the sinuses, which are air-filled spaces within the skull. It is commonly accompanied by symptoms such as pain in the forehead, cheeks, or around the eyes. Sinus pressure often occurs as a result of inflammation or blockage in the nasal passages and sinuses, typically caused by conditions like sinusitis , allergies, or a common cold."</p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'homepage/assets/img/sinus_pressure.jpg'%}" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-6">
+              <div class="row gy-4">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>throat_irritation (تهيج الحلق)</h3>
+                  <p class="fst-italic"> Discomfort or tickling sensation in the throat. </p>
+                  <p>
+                    "Throat irritation refers to a bothersome sensation or discomfort in the throat, often characterized by itching or a feeling of dryness. It can also include symptoms such as a sore throat, hoarseness, or difficulty swallowing. Throat irritation can occur due to various factors, like the common cold or strep throat, allergies, dry air, excessive voice strain, acid reflux, or environmental irritants such as smoke or pollutants."</p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'homepage/assets/img/throat_irritation.jpg'%}" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-7">
+              <div class="row gy-4">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>nausea (غثيان)</h3>
+                  <p class="fst-italic"> Feeling of sickness or queasiness. </p>
+                  <p> "Nausea is a discomforting sensation often characterized by a queasy feeling in the stomach, an urge to vomit, or a feeling of unease. It can be accompanied by other symptoms such as dizziness, increased salivation, or a general feeling of sickness. Nausea can have various causes, digestive issues such as indigestion, food poisoning, gastroenteritis, or gastric reflux." </p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'homepage/assets/img/nausea.jpg'%}" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-8">
+              <div class="row gy-4">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>back_pain (آلام الظهر)</h3>
+                  <p class="fst-italic"> Discomfort or pain in the back. </p>
+                  <p>"Back pain refers to discomfort or pain experienced in the area of the back, ranging from the upper, middle, to lower back. It can vary in intensity and may be accompanied by stiffness, muscle tension, or limited range of motion. Back pain can have various causes, including muscle strains or sprains due to improper lifting, sudden movements, or poor posture." </p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'homepage/assets/img/back_pain.png'%}" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-9">
+              <div class="row gy-4">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>belly_pain (آلام البطن)</h3>
+                  <p class="fst-italic"> Pain or discomfort in the abdomen. </p>
+                  <p>"Belly pain, also known as abdominal pain, refers to discomfort or pain experienced in the area between the chest and pelvis. Belly pain can originate from various organs within the abdomen, including the stomach, intestines, liver, gallbladder, kidneys, or appendix. It can be caused by a wide range of factors, such as gastrointestinal issues, urinary tract infections, kidney stones, menstrual cramps, gastritis, appendicitis." </p>
+                  </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'homepage/assets/img/belly_pain.jpg'%}" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-10">
+              <div class="row gy-4">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>redness_of_eyes (احمرار العين)</h3>
+                  <p class="fst-italic"> Red or bloodshot appearance of the eyes. </p>
+                  <p>"Redness of the eyes refers to the appearance of red or bloodshot eyes, characterized by the dilation of blood vessels on the surface of the eye. It can affect one or both eyes and may be accompanied by other symptoms such as itching, burning, tearing or a gritty sensation. Redness of the eyes can have various causes, including eye allergies, conjunctivitis (pink eye), dry eye syndrome, eye strain from prolonged computer use or reading."</p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'homepage/assets/img/redness_of_eyes.jpg'%}" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</body>
+
+{% endblock %}

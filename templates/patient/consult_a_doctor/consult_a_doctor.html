@@ -1,0 +1,245 @@
+{% extends "basic.html" %}
+{% load static %}
+
+ 
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'patient/consult_a_doctor/consult_a_doctor.css' %}">
+
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet" >
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+     <style>
+      body { background-color: #5f94c21a !important; }
+    </style>   
+
+{% endblock %}
+
+{% block body %}
+
+<br>
+
+<center><h2> Consult a Doctor </h2>
+</center>
+<div class="container  mt-5 mb-3">  
+
+            <table class="table table-hover table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Doctor Name</th>
+                  <th>Specialization</th>
+                  <th>Email</th>
+                  <th>Ratings</th>
+                  <th>View Profile</th>
+                  <th>Consult</th>
+                </tr>
+              </thead>
+
+              <tbody>
+               
+               {% for i in dobj %}
+               
+               
+                <tr>
+                  <td>{{i.name}}</td>
+                  <td>{{i.specialization}}</td>
+                  <td>{{i.user.email}}</td>
+                  <td>{{i.rating}}/5</td>
+                  <td>
+                  
+                    <form action="{% url 'dviewprofile' i.user.username %}" method="GET">
+                      {% csrf_token %} 
+                       <button type="submit" class="btn btn-primary"> Profile</button>  
+                    </form>
+
+
+                    
+                  </td>
+                  <td>
+                    
+                        <form action="#" method="GET">
+                          {% csrf_token %} 
+                          <button id="consultbtn" type="submit" class="btn btn-primary">  <a  data-toggle="modal" data-target=".bd-example-modal-card"
+                            style="">Consult   </a> </button>
+                         
+                          </form>
+    
+                  </td>
+                </tr>
+
+<!--Start Sign-Up section in navbar  -->
+<div class="modal fade bd-example-modal-card" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+
+    <div class="container d-flex justify-content-center mt-5 mb-5">
+
+        
+
+      <div class="row g-3">
+  
+        <div class="col-md-6">  
+          
+          <span>Payment Method</span>
+          <div class="card">
+  
+            <div class="accordion" id="accordionExample">
+              
+              <div class="card">
+                <div class="card-header p-0" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <div class="d-flex align-items-center justify-content-between">
+  
+                        <span>Paypal</span>
+                        <img src="https://i.imgur.com/7kQEsHU.png" width="30">
+                        
+                      </div>
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <input type="text" class="form-control" placeholder="Paypal email">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card">
+                <div class="card-header p-0">
+                  <h2 class="mb-0">
+                    <button class="btn btn-light btn-block text-left p-3 rounded-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <div class="d-flex align-items-center justify-content-between">
+  
+                        <span>Credit card</span>
+                        <div class="icons">
+                          <img src="https://i.imgur.com/2ISgYja.png" width="30">
+                          <img src="https://i.imgur.com/W1vtnOV.png" width="30">
+                          <img src="https://i.imgur.com/35tC99g.png" width="30">
+                          <img src="https://i.imgur.com/2ISgYja.png" width="30">
+                        </div>
+                        
+                      </div>
+                    </button>
+                  </h2>
+                </div>
+  
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body payment-card-body">
+                    
+                    <span class="font-weight-normal card-text">Card Number</span>
+                    <div class="input">
+  
+                      <i class="fa fa-credit-card"></i>
+                      <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
+                      
+                    </div> 
+  
+                    <div class="row mt-3 mb-3">
+  
+                      <div class="col-md-6">
+  
+                        <span class="font-weight-normal card-text">Expiry Date</span>
+                        <div class="input">
+  
+                          <i class="fa fa-calendar"></i>
+                          <input type="text" class="form-control" placeholder="MM/YY">
+                          
+                        </div> 
+                        
+                      </div>
+  
+  
+                      <div class="col-md-6">
+  
+                        <span class="font-weight-normal card-text">CVC/CVV</span>
+                        <div class="input">
+  
+                          <i class="fa fa-lock"></i>
+                          <input type="text" class="form-control" placeholder="000">
+                          
+                        </div> 
+                        
+                      </div>
+                      
+  
+                    </div>
+  
+                    <span class="text-muted certificate-text"><i class="fa fa-lock"></i> Your transaction is secured with ssl certificate</span>
+                   
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+  
+        </div>
+  
+        <div class="col-md-6">
+            <span>Summary</span>
+  
+            <div class="card">
+  
+  
+              <hr class="mt-0 line">
+  
+              <div class="p-3">
+  
+                <div class="d-flex justify-content-between mb-2">
+  
+                  <span>pay for consult  a doctor (US Dollars)</span>
+                  <span>$10</span>
+                  
+                </div>
+  
+                
+  
+              </div>
+  
+              <hr class="mt-0 line">
+  
+  
+  
+              <div class="p-3">
+                <form action="{% url 'make_consultation' i.user.username %}" method="Post">
+                  {% csrf_token %} 
+                 <button class="btn btn-primary btn-block free-button">Book Now</button> 
+                </form>
+                
+              </div>
+  
+  
+  
+              
+            </div>
+        </div>
+        
+      </div>
+      
+  
+      
+    </div>
+    
+
+  </div>
+</div>
+</div>
+<!--End Sign-Up section in navbar  -->
+
+                {% endfor %}
+
+              
+              </tbody>
+            </table>
+        
+
+
+</div>
+  
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}
